@@ -1568,7 +1568,6 @@ func newNetwork(peers ...stateMachine) *network {
 func newNetworkWithConfig(configFunc func(*Config), peers ...stateMachine) *network {
 	size := len(peers)
 	peerAddrs := idsBySize(size)
-
 	npeers := make(map[uint64]stateMachine, size)
 	nstorage := make(map[uint64]*MemoryStorage, size)
 
